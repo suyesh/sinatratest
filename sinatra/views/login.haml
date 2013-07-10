@@ -1,0 +1,244 @@
+﻿!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %title Tabbed Forms And Tab Controls Live Preview
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{:href => "styles/bootstrap.min.css", :rel => "stylesheet"}/
+    %link{:href => "styles/bootstrap-responsive.min.css", :rel => "stylesheet"}/
+    %link{:href => "css/preview.css", :rel => "stylesheet"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=PT+Sans:400,700", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "styles/font-awesome.min.css", :rel => "stylesheet"}/
+    /[if IE 7]
+      <link href="styles/font-awesome-ie7.min.css" rel="stylesheet" />
+    /[if IE 8]
+      <style type="text/css">
+      \.navbar-inner{
+      filter:none;
+      }
+      </style>
+  %body
+    .divider.large.visible-desktop
+    #demo-1.row-fluid
+      .span10.offset1
+        .tabbable.custom-tabs.tabs-animated.flat.flat-all.hide-label-980.shadow.track-url.auto-scroll
+          %ul.nav.nav-tabs
+            %li.active
+              %a.active{"data-toggle" => "tab", :href => "#panel1"}
+                %i.icon-lock>
+                \ 
+                %span Login Panel
+            %li
+              %a{"data-toggle" => "tab", :href => "#panel2"}
+                %i.icon-user>
+                \ 
+                %span Register Panel
+            %li
+              %a{"data-toggle" => "tab", :href => "#panel3"}
+                %i.icon-key>
+                \ 
+                %span Forgot Password
+            %li
+              %a{"data-toggle" => "tab", :href => "#panel4"}
+                %i.icon-envelope-alt>
+                \ 
+                %span Contact Us
+          .tab-content
+            #panel1.tab-pane.active
+              .row-fluid
+                .span5
+                  %h4
+                    %i.icon-user>
+                    \   Login Here
+                  %label Username
+                  %input.input-block-level{:type => "text"}/
+                  %label
+                    Password
+                    %a.pull-right{:href => "#"}
+                      %i.icon-question-sign>
+                      \ Forgot Password
+                  %input.input-block-level{:type => "password"}/
+                  %label
+                    %button.btn.btn-mini.custom-checkbox.active{"data-toggle" => "button", :type => "button"}
+                      %i.icon-ok
+                    \   Remember Me
+                  %br/
+                  %a.btn{:href => "#"}
+                    Sign In   
+                    %i.icon-chevron-sign-right
+                .span3
+                  %h4
+                    %i.icon-expand-alt>
+                    \  Social
+                  .socials.clearfix
+                    %a.icon-facebook.facebook
+                    %a.icon-twitter.twitter
+                    %a.icon-google-plus.google-plus
+                    %a.icon-pinterest.pinterest
+                    %a.icon-linkedin.linked-in
+                    %a.icon-github.github
+                .span4
+                  %h4
+                    %i.icon-question>
+                    \  Registration
+                  .box
+                    %p
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel.
+                    %p
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in.
+                  .box
+                    Don't Have An Account.
+                    %br/
+                    Click Here For
+                    %a{"data-toggle" => "tab", :href => "#"} Free Register
+            #panel2.tab-pane
+              .row-fluid
+                .span5
+                  %h4
+                    %i.icon-user>
+                    \   Register Here
+                  %label Username
+                  %input.input-block-level{:type => "text"}/
+                  %label Password
+                  %input.input-block-level{:type => "password"}/
+                  %label Repeat Password
+                  %input.input-block-level{:type => "password"}/
+                  %label
+                    %button.btn.btn-mini.custom-checkbox.active{"data-toggle" => "button", :type => "button"}
+                      %i.icon-ok
+                    \   I Aggree With
+                    %a{:href => "#"} Terms & Conditions
+                  %br/
+                  %a.btn{:href => "#"}
+                    Register Now   
+                    %i.icon-chevron-sign-right
+                .span3
+                  %h4
+                    %i.icon-expand-alt>
+                    \  Social
+                  .socials.clearfix
+                    %a.icon-facebook.facebook
+                    %a.icon-twitter.twitter
+                    %a.icon-google-plus.google-plus
+                    %a.icon-pinterest.pinterest
+                    %a.icon-linkedin.linked-in
+                    %a.icon-github.github
+                .span4
+                  %h4
+                    %i.icon-question>
+                    \  Login
+                  .box
+                    %p
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel.
+                    %p
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in.
+                  .box
+                    Already Have An Account.
+                    %br/
+                    Click Here For
+                    %a{"data-toggle" => "tab", :href => "#"} Login
+            #panel3.tab-pane
+              .row-fluid
+                .span5
+                  %h4
+                    %i.icon-unlock>
+                    \  Password Recovery
+                  %label Email
+                  %input.input-block-level{:type => "text"}/
+                  %label Security Question
+                  %select.input-block-level
+                    %option{:disabled => "disabled", :selected => "selected"} ---Select---
+                    %option Which Is Your First Mobile
+                    %option What Is Your Pet Name
+                    %option What Is Your Mother Name
+                    %option Which Is Your First Game
+                  %label Answer
+                  %input.input-block-level{:type => "text"}/
+                  %br/
+                  %br/
+                  %a.btn{:href => "#"}
+                    Recover Password   
+                    %i.icon-chevron-sign-right
+                .span7
+                  %h4
+                    %i.icon-question>
+                    \  Help
+                  .box
+                    %p
+                      Getting Error With Password Recovery Click Here For
+                      %a{:href => "#"} Support
+                    %ul
+                      %li Vestibulum pharetra lectus montes lacus!
+                      %li Iaculis lectus augue pulvinar taciti.
+                  .box
+                  #panel4.tab-pane
+                    .row-fluid
+                      .span5
+                        %h4
+                          %i.icon-envelope-alt>
+                          \  Contact Us
+                        %label Name
+                        %input.input-block-level{:id => "", :type => "text", :value => ""}/
+                        %label Email
+                        %input#Text1.input-block-level{:type => "text", :value => ""}/
+                        %label Mobile No
+                        %input#Text2.input-block-level{:type => "text", :value => ""}/
+                        %label Message
+                        %textarea.input-block-level{:rows => "5"}
+                        %a.btn{:href => "#"}
+                          Send Message   
+                          %i.icon-chevron-sign-right
+                        %br.visible-phone/
+                        %br.visible-phone/
+                      .span7
+                        .row-fluid
+                          .span12
+                            %h4
+                              %i.icon-location-arrow>
+                              \  Locate Us
+                            .map
+                        .row-fluid
+                          .span6
+                            %h4
+                              %i.icon-envelope-alt>
+                              \  Contact Us
+                            %address
+                              %strong Full Name
+                              %br/
+                              %a{:href => "mailto:#"} first.last@example.com
+                          .span6
+                            %h4
+                              %i.icon-location-arrow>
+                              \  Our Address
+                            %address
+                              %strong Twitter, Inc.
+                              %br/
+                              795 Folsom Ave, Suite 600
+                              %br/
+                              San Francisco, CA 94107
+                              %br/
+                              %abbr{:title => "Phone"} P:
+                              (123) 456-7890
+          .divider.large.visible-desktop
+          .row-fluid
+            .span10.offset1
+              .well{:style => "color:rgb(90,90,90)"}
+                %p This Mehtod Is Also Able To Scroll Page(Optional) If The Tab Panel Is Below In The Page
+                %p Try To Make Changes In Url Panel Id As Follow  OR click associated Link
+                %dl.dl-horizontal
+                  %dt Login Panel(TAB)
+                  %dd
+                    %a{:href => "track-url-demo.html#panel1", :target => "_blank"} #panel1
+                  %dt Register Panel(TAB)
+                  %dd
+                    %a{:href => "track-url-demo.html#panel2", :target => "_blank"} #panel2
+                  %dt Recovery Panel(TAB)
+                  %dd
+                    %a{:href => "track-url-demo.html#panel3", :target => "_blank"} #panel3
+                  %dt Contact Panel(TAB)
+                  %dd
+                    %a{:href => "track-url-demo.html#panel4", :target => "_blank"} #panel4
+          .divider.large.visible-desktop
+          .divider
+          %script{:src => "scripts/jquery-1.9.1.min.js"}
+          %script{:src => "scripts/bootstrap.min.js"}
+          %script{:src => "scripts/tabs-addon.js"}
